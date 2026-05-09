@@ -121,22 +121,6 @@ The default parameters match the manuscript calibration:
 **macOS note:** Use `n_cores <= 4` and `chunk_size = 50` to avoid
 silent worker crashes with `mclapply` on Apple Silicon.
 
-## Citation
-
-If you use this package, please cite:
-
-> [Author names redacted for review] (2025). A Bayesian Nonparametric
-> EffTox Design for Phase I/II Oncology Dose Finding with Monotone
-> Toxicity Control and Covariate Adaptation. *Statistics in Medicine*,
-> [under review].
-
-and the underlying BART implementation:
-
-> Sparapani R, Spanbauer C, McCulloch R (2021). Nonparametric machine
-> learning and efficient computation with Bayesian additive regression
-> trees: the BART R package. *Journal of Statistical Software*
-> **97**(1):1-66. https://doi.org/10.18637/jss.v097.i01
-
 ## References
 
 - Thall PF, Cook JD (2004). Dose-finding based on efficacy-toxicity
