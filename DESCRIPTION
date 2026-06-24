@@ -1,0 +1,43 @@
+Package: bartEffTox
+Type: Package
+Title: Bayesian Nonparametric EffTox Design for Phase I/II Dose Finding
+Version: 0.1.0
+Date: 2025-05-09
+Authors@R: c(
+    person("[Author names redacted for review]", role = c("aut", "cre"),
+           email = "[email redacted]"))
+Description: Implements the BART-EffTox design for Bayesian Phase I/II
+    oncology dose-finding trials. The design extends the EffTox decision
+    framework (Thall and Cook 2004) by replacing the parametric bivariate
+    dose-response model with separate probit Bayesian Additive Regression
+    Trees (BART) models for efficacy and toxicity, combined at the decision
+    stage through a common efficacy-toxicity utility function. A
+    pool-adjacent-violators (PAVA) isotonic projection enforces monotone
+    toxicity at each decision stage without constraining the efficacy
+    surface. The package provides functions for: run-in beta-binomial
+    safety calibration; PAVA isotonic projection; BART-phase admissibility
+    and utility-based dose selection; full two-phase trial simulation; and
+    operating characteristic summarisation. A retrospective illustration
+    using published AML trial summaries from Thall and Cook (2004) is
+    included.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Depends:
+    R (>= 4.1.0)
+Imports:
+    BART (>= 2.9),
+    parallel
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+URL: https://github.com/[username]/bartEffTox
+BugReports: https://github.com/[username]/bartEffTox/issues
+References:
+    Thall PF, Cook JD (2004). Dose-finding based on efficacy-toxicity
+    trade-offs. Biometrics 60(3):684-693.
+    Chipman HA, George EI, McCulloch RE (2010). BART: Bayesian additive
+    regression trees. Annals of Applied Statistics 4(1):266-298.
